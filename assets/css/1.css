@@ -1,0 +1,23 @@
+p{
+    color: green;
+    background-color: black;
+    text-align: center;
+    text-decoration: overline;
+    text-decoration: overline underline rgb(0, 87, 0);
+    text-decoration: overline underline rgb(0, 87, 0) dotted;    
+    text-decoration: overline underline rgb(0, 87, 0) dashed;    
+    text-decoration: overline underline;
+    text-decoration: overline underline rgb(0, 87, 0) double;
+    text-decoration: overline  line-through underline rgb(0, 87, 0) double;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    
+}
