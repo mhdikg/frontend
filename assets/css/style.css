@@ -1,0 +1,22 @@
+p{
+    color: orange;
+    background-color: black;
+    text-align: center;
+    text-decoration: overline;
+    text-decoration: underline;
+    text-decoration: overline underline;
+    text-decoration: overline underline red;
+    text-decoration: overline underline red dotted;
+    text-decoration: overline underline red dashed;
+    text-decoration: overline underline red double;
+    text-decoration: overline line-through underline red solid;
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+a{
+    text-decoration: none;
+}

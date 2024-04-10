@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Thin.woff2);
+            font-weight: 100;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-ExtraLight.woff2);
+            font-weight: 200;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Light.woff2);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Regular.woff2);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Medium.woff2);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-SemiBold.woff2);
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Bold.woff2);
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-ExtraBold.woff2);
+            font-weight: 800;
+        }
+
+        @font-face {
+            font-family: vazir;
+            src: url(assets/fonts/vazir/Vazirmatn-Black.woff2);
+            font-weight: 900;
+        }
+
+        nav {
+            max-width: 1500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: solid rgba(128, 128, 128, 0.133);
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 200;
+        }
+
+        .logos {
+            display: none;
+        }
+
+        .user {
+            display: none;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        nav ul {
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-family: vazir;
+            font-weight: 200;
+        }
+
+        nav .details {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            font-family: vazir;
+            font-weight: 300;
+            font-size: x-large;
+        }
+
+        nav .email {
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-left: 15px;
+        }
+
+        nav .telephone {
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .title {
+            max-width: 1500px;
+            margin-top: 25px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title img {
+            padding: 0;
+            margin: 0;
+            margin-left: 15px;
+        }
+
+        .title form {
+            display: flex;
+            flex-direction: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .title form select {
+            margin-right: 10px;
+            width: 180px;
+            height: 50px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            border-style: none;
+            background-color: #f8f8f8;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 200;
+        }
+
+        .title form input {
+            width: 500px;
+            height: 48px;
+            border-style: none;
+            background-color: #f8f8f8;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 200;
+        }
+
+        .title form button {
+            width: 50px;
+            height: 50px;
+            background-color: #83c347;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-style: none;
+        }
+
+        .title form button i {
+            color: white;
+        }
+
+        .title .account {
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-right: 80px;
+            background-color: #f8f8f8;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .title .favorite {
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-right: 50px;
+            background-color: #f8f8f8;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .title .cart {
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-right: 50px;
+            background-color: #83c347;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .title .cart i {
+            color: white;
+        }
+
+        .title .cart span {
+            color: white;
+        }
+
+        .list {
+            margin-left: 25px;
+            border-top: solid rgba(128, 128, 128, 0.133);
+            max-width: 1500px;
+            margin: 0;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: solid rgba(128, 128, 128, 0.133);
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+            margin-top: 25px;
+        }
+
+        .list .all select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+            width: 270px;
+            height: 50px;
+            background-color: #83c347;
+            border-style: none;
+            border-radius: 10px;
+            color: #f8f8f8;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .list .home select {
+            margin-right: 20px;
+            width: 130px;
+            height: 50px;
+            border-radius: 10px;
+            border-style: none;
+            font-size: medium;
+            margin-left: auto;
+            font-family: vazir;
+            font-weight: 400;
+        }
+
+        .list .menu select {
+            margin-right: 20px;
+            width: 130px;
+            height: 50px;
+            border-radius: 10px;
+            border-style: none;
+            font-size: medium;
+            margin-left: auto;
+            font-family: vazir;
+            font-weight: 400;
+        }
+
+        .list span {
+            font-size: medium;
+            margin: 15PX;
+
+            font-family: vazir;
+            font-weight: 400;
+        }
+
+        .list .iconss {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .list .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .list .icons .facebook {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #395498;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list .icons .facebook i {
+            color: white;
+        }
+
+        .list .icons .twitter {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #5da9dd;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list .icons .twitter i {
+            color: white;
+        }
+
+        .list .icons .google {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #d54c40;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list .icons .google i {
+            color: white;
+        }
+
+        .list .icons .telegram {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #29a1d5;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list .icons .telegram i {
+            color: white;
+        }
+
+        .list .icons .instagram {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #00afc0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list .icons .instagram i {
+            color: white;
+        }
+
+        .side {
+            display: flex;
+            flex-direction: column;
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: vazir;
+            font-weight: 200;
+        }
+
+        .side .sde {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            background-color: #f8f8f8;
+            width: 100%;
+        }
+
+        .side .sde ul {
+            display: flex;
+            flex-direction: row;
+            text-decoration: solid;
+            list-style-type: none;
+            gap: 8px;
+            text-align: right;
+            padding: 0;
+        }
+
+        .side .sde a {
+            text-decoration: none;
+            font-size: large;
+            font-family: vazir;
+            font-weight: 300;
+        }
+
+        .side .sde strong {
+            font-size: medium;
+            font-family: vazir;
+            font-weight: 200;
+        }
+        .allprdctg{
+            display: flex;
+            flex-direction: row;
+            max-width: 1500px;
+            text-align: right;
+            padding: 0;
+        }
+        .allprdctg .prdctg{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .allprdctg .prdctg .products{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: start;
+            width: 70%;
+            padding: 0;
+            margin: 0;
+        }
+        .allprdctg .products .titr{
+            display: flex;
+            flex-direction: row;
+            font-family: vazir;
+            font-size: 400;
+            width: 100%;
+            padding: 0;
+            border-radius: 0px;
+            border-bottom: solid rgba(100, 100, 100, 0.120);
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 45px    ;
+        }
+        .allprdctg .products .titr h3{
+
+            margin: 0;
+        }
+        .allprdctg .serch{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0;
+            border-bottom: solid rgba(128, 128, 128, 0.133);
+            width: 100%;
+        }
+        .allprdctg .serch .srch1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: vazir;
+            font-weight: 300;
+            width: 50%;
+            gap:5px;
+        }
+        .allprdctg .serch .srch1 p{
+            font-family: vazir;
+            font-weight: 500;
+            font-size: medium;
+            color: gray;
+            margin-right: 5px;
+        }
+        .allprdctg .serch .srch2{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap:15px;
+            margin-top: 8px;
+        }
+        .allprdctg .serch .srch2 .sl1{
+            padding: 5px;
+            margin: 0;
+            border:gray 2px solid;
+            border-radius: 5px;
+            font-family: vazir;
+            font-size: medium;
+            font-weight: 200;
+        }
+        .allprdctg .serch .srch2 .sl2{
+            padding: 5px;
+            border:gray 2px solid;
+            border-radius: 5px;
+            font-family: vazir;
+            font-size: medium;
+            font-weight: 200;
+        }
+        .allprds{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            max-width: 1500px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="user">
+            <i class='bx bx-user bx-md'></i>
+        </div>
+        <ul>
+            <li><a href="#">پرسش و پاسخ</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">وسایل بازی و گیم</a></li>
+            <li><a href="#">تبلت و موبایل</a></li>
+        </ul>
+        <div class="details">
+            <div class="telephone">
+                <span><i class='bx bx-phone-call bx-sm'></i></span>
+                <span>۰۲۱-۱۲۳۴-۵۶۷۸۹</span>
+            </div>
+            <div class="email">
+                <span><i class='bx bx-envelope bx-sm'></i></span>
+                <span>example@email.com</span>
+            </div>
+        </div>
+        <div class="logos">
+            <img src="assets/img/logo.png">
+        </div>
+        <div class="mobile">
+            <i class='bx bx-menu bx-md'></i>
+        </div>
+    </nav>
+    <div class="title">
+        <img src="assets/img/logo.png">
+        <form>
+            <select name="select">
+                <option>همه دسته بندی ها</option>
+                <option>بدون دسته بندی</option>
+                <option>اسپیکر و صوتی</option>
+                <option>تبلت و موبایل</option>
+                <option>ساعت دیجیتال</option>
+                <option>لپ تاپ و دسکتاپ</option>
+                <option>مانیتور و تلویزیون</option>
+                <option>موس و گیبورد</option>
+                <option>هارد و فلش</option>
+                <option>هدست و هدفون</option>
+                <option>وسایل بازی و گیم</option>
+            </select>
+            <input type="text" value="جستجو...">
+            <button type="submit"><i class='bx bx-search bx-sm'></i></button>
+        </form>
+        <div class="account">
+            <span><i class='bx bx-user bx-sm'></i></span>
+            <span>حساب کاربری</span>
+        </div>
+        <div class="favorite">
+            <span><i class='bx bx-heart bx-sm'></i></span>
+            <span>علاقمندی ها</span>
+        </div>
+        <div class="cart">
+            <span><i class='bx bx-shopping-bag bx-sm'></i></span>
+            <span>سبد خرید</span>
+        </div>
+    </div>
+    <div class="list">
+        <div class="all">
+            <select>
+                <span><i class='bx bx-category'></i></span>
+                <option>همه دسته بندی ها</option>
+                <option>بدون دسته بندی</option>
+                <option>اسپیکر و صوتی</option>
+                <option>تبلت و موبایل</option>
+                <option>ساعت دیجیتال</option>
+                <option>لپ تاپ و دسکتاپ</option>
+                <option>مانیتور و تلویزیون</option>
+                <option>موس و گیبورد</option>
+                <option>هارد و فلش</option>
+                <option>هدست و هدفون</option>
+                <option>وسایل بازی و گیم</option>
+            </select>
+        </div>
+        <div class="home">
+            <select>
+                <option>صفحه خانگی</option>
+                <option>صفحه خانگی 1</option>
+                <option>صفحه خانگی 2</option>
+            </select>
+        </div>
+        <div class="menu">
+            <select>
+                <option>منوی چندمنظوره</option>
+            </select>
+        </div>
+        <span>اخبار</span>
+        <span>فروشگاه</span>
+        <div class="iconss">
+            <div class="icons">
+                <div class="facebook"><i class='bx bxl-facebook'></i></div>
+                <div class="twitter"><i class='bx bxl-twitter'></i></div>
+                <div class="google"><i class='bx bxl-google-plus'></i></div>
+                <div class="telegram"><i class='bx bxl-telegram'></i></div>
+                <div class="instagram"><i class='bx bxl-instagram'></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="side">
+        <div class="sde">
+            <ul>
+                <li><a href="index32.html">صفحه خانگی</a></li>
+                <li> > </li>
+                <strong>فروشگاه</strong>
+            </ul>
+        </div>
+        <div class="allprdctg">
+            <div class="prdctg">
+                <div class="products">
+                    <div class="titr">
+                        <h3>فروشگاه</h3>
+                    </div>
+                    <div class="serch">
+                        <div class="srch1">
+                            <i class='bx bx-objects-horizontal-left bx-md'></i>  <i class='bx bx-category bx-md'></i> <p>نمایش 1-20 از 30 نتیجه</p>
+                            
+                        </div>
+                        <div class="srch2">
+                            <select name="orderby" class="sl1">
+                                <option value="op1" selected="selected">مرتب سازی پیش‌فرض</option>
+                                <option value="op1">مرتب ساز محبوبیت</option>
+                                <option value="op1">مرتب سازی امتیاز</option>
+                                <option value="op1">مرتب سازی جدیدترین</option>
+                                <option value="op1">مرتب سازی ارزان ترین</option>
+                                <option value="op1">مرتب سازی گران ترین</option>
+                            </select>
+                            <select name="number" class="sl2">
+                                <option value="op1" selected="selected">نمایش 20</option>
+                                <option value="op1">نمایش 12</option>
+                                <option value="op1">نمایش 16</option>
+                                <option value="op1">نمایش 32</option>
+                                <option value="op1">نمایش 34</option>
+                                <option value="op1">نمایش 40</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="allprds">
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>
+                        <div class="prdct"></div>                        
+                        <div class="prdct"></div>                        
+
+                    </div>
+                </div>
+                <div class="categories"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
