@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="assets/css/shop.css" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         @font-face {
@@ -60,522 +61,11 @@
             src: url(assets/fonts/vazir/Vazirmatn-Black.woff2);
             font-weight: 900;
         }
-
-        nav {
-            max-width: 1500px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px;
-            border-bottom: solid rgba(128, 128, 128, 0.133);
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 200;
-        }
-
-        .logos {
-            display: none;
-        }
-
-        .user {
-            display: none;
-        }
-
-        .mobile {
-            display: none;
-        }
-
-        nav ul {
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: black;
-            text-decoration: none;
-            font-family: vazir;
-            font-weight: 200;
-        }
-
-        nav .details {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            font-family: vazir;
-            font-weight: 300;
-            font-size: x-large;
-        }
-
-        nav .email {
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-left: 15px;
-        }
-
-        nav .telephone {
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .title {
-            max-width: 1500px;
-            margin-top: 25px;
-            padding: 5px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .title img {
-            padding: 0;
-            margin: 0;
-            margin-left: 15px;
-        }
-
-        .title form {
-            display: flex;
-            flex-direction: center;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .title form select {
-            margin-right: 10px;
-            width: 180px;
-            height: 50px;
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
-            border-style: none;
-            background-color: #f8f8f8;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 200;
-        }
-
-        .title form input {
-            width: 500px;
-            height: 48px;
-            border-style: none;
-            background-color: #f8f8f8;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 200;
-        }
-
-        .title form button {
-            width: 50px;
-            height: 50px;
-            background-color: #83c347;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-style: none;
-        }
-
-        .title form button i {
-            color: white;
-        }
-
-        .title .account {
-            border-radius: 10px;
-            width: 120px;
-            height: 50px;
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-right: 80px;
-            background-color: #f8f8f8;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .title .favorite {
-            border-radius: 10px;
-            width: 120px;
-            height: 50px;
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-right: 50px;
-            background-color: #f8f8f8;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .title .cart {
-            border-radius: 10px;
-            width: 120px;
-            height: 50px;
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-right: 50px;
-            background-color: #83c347;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .title .cart i {
-            color: white;
-        }
-
-        .title .cart span {
-            color: white;
-        }
-
-        .list {
-            margin-left: 25px;
-            border-top: solid rgba(128, 128, 128, 0.133);
-            max-width: 1500px;
-            margin: 0;
-            padding: 5px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-bottom: solid rgba(128, 128, 128, 0.133);
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-            margin-top: 25px;
-        }
-
-        .list .all select {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-size: large;
-            width: 270px;
-            height: 50px;
-            background-color: #83c347;
-            border-style: none;
-            border-radius: 10px;
-            color: #f8f8f8;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .list .home select {
-            margin-right: 20px;
-            width: 130px;
-            height: 50px;
-            border-radius: 10px;
-            border-style: none;
-            font-size: medium;
-            margin-left: auto;
-            font-family: vazir;
-            font-weight: 400;
-        }
-
-        .list .menu select {
-            margin-right: 20px;
-            width: 130px;
-            height: 50px;
-            border-radius: 10px;
-            border-style: none;
-            font-size: medium;
-            margin-left: auto;
-            font-family: vazir;
-            font-weight: 400;
-        }
-
-        .list span {
-            font-size: medium;
-            margin: 15PX;
-
-            font-family: vazir;
-            font-weight: 400;
-        }
-
-        .list .iconss {
-            width: 50%;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-end;
-            gap: 15px;
-        }
-
-        .list .icons {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-end;
-            gap: 15px;
-        }
-
-        .list .icons .facebook {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #395498;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .list .icons .facebook i {
-            color: white;
-        }
-
-        .list .icons .twitter {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #5da9dd;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .list .icons .twitter i {
-            color: white;
-        }
-
-        .list .icons .google {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #d54c40;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .list .icons .google i {
-            color: white;
-        }
-
-        .list .icons .telegram {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #29a1d5;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .list .icons .telegram i {
-            color: white;
-        }
-
-        .list .icons .instagram {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #00afc0;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .list .icons .instagram i {
-            color: white;
-        }
-
-        .side {
-            display: flex;
-            flex-direction: column;
-            max-width: 1500px;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: vazir;
-            font-weight: 200;
-        }
-
-        .side .sde {
-            display: flex;
-            flex-direction: row;
-            padding: 0;
-            margin: 0;
-            text-align: right;
-            background-color: #f8f8f8;
-            width: 100%;
-        }
-
-        .side .sde ul {
-            display: flex;
-            flex-direction: row;
-            text-decoration: solid;
-            list-style-type: none;
-            gap: 8px;
-            text-align: right;
-            padding: 0;
-        }
-
-        .side .sde a {
-            text-decoration: none;
-            font-size: large;
-            font-family: vazir;
-            font-weight: 300;
-        }
-
-        .side .sde strong {
-            font-size: medium;
-            font-family: vazir;
-            font-weight: 200;
-        }
-        .allprdctg{
-            display: flex;
-            flex-direction: row;
-            max-width: 1500px;
-            text-align: right;
-            padding: 0;
-        }
-        .allprdctg .prdctg{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-        }
-        .allprdctg .prdctg .products{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: start;
-            width: 70%;
-            padding: 0;
-            margin: 0;
-        }
-        .allprdctg .products .titr{
-            display: flex;
-            flex-direction: row;
-            font-family: vazir;
-            font-size: 400;
-            width: 100%;
-            padding: 0;
-            border-radius: 0px;
-            border-bottom: solid rgba(100, 100, 100, 0.120);
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin-top: 45px    ;
-        }
-        .allprdctg .products .titr h3{
-
-            margin: 0;
-        }
-        .allprdctg .serch{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 0;
-            border-bottom: solid rgba(128, 128, 128, 0.133);
-            width: 100%;
-        }
-        .allprdctg .serch .srch1{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            font-family: vazir;
-            font-weight: 300;
-            width: 50%;
-            gap:5px;
-        }
-        .allprdctg .serch .srch1 p{
-            font-family: vazir;
-            font-weight: 500;
-            font-size: medium;
-            color: gray;
-            margin-right: 5px;
-        }
-        .allprdctg .serch .srch2{
-            display: flex;
-            flex-direction: row;
-            width: 50%;
-            align-items: flex-end;
-            justify-content: flex-end;
-            gap:15px;
-            margin-top: 8px;
-        }
-        .allprdctg .serch .srch2 .sl1{
-            padding: 5px;
-            margin: 0;
-            border:gray 2px solid;
-            border-radius: 5px;
-            font-family: vazir;
-            font-size: medium;
-            font-weight: 200;
-        }
-        .allprdctg .serch .srch2 .sl2{
-            padding: 5px;
-            border:gray 2px solid;
-            border-radius: 5px;
-            font-family: vazir;
-            font-size: medium;
-            font-weight: 200;
-        }
-        .allprds{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: flex-start;
-            max-width: 1500px;
-
-        }
     </style>
 </head>
 
 <body>
     <nav>
-        <div class="user">
-            <i class='bx bx-user bx-md'></i>
-        </div>
         <ul>
             <li><a href="#">پرسش و پاسخ</a></li>
             <li><a href="#">درباره ما</a></li>
@@ -592,15 +82,15 @@
                 <span>example@email.com</span>
             </div>
         </div>
-        <div class="logos">
-            <img src="assets/img/logo.png">
-        </div>
-        <div class="mobile">
-            <i class='bx bx-menu bx-md'></i>
-        </div>
     </nav>
     <div class="title">
+        <div class="user">
+            <i class='bx bx-user bx-md'></i>
+        </div>
         <img src="assets/img/logo.png">
+        <div class="menu">
+            <i class='bx bx-menu bx-md'></i>
+        </div>
         <form>
             <select name="select">
                 <option>همه دسته بندی ها</option>
@@ -662,7 +152,564 @@
         </div>
         <span>اخبار</span>
         <span>فروشگاه</span>
-        <div class="iconss">
+        <div class="icons">
+            <div class="facebook"><i class='bx bxl-facebook'></i></div>
+            <div class="twitter"><i class='bx bxl-twitter'></i></div>
+            <div class="google"><i class='bx bxl-google-plus'></i></div>
+            <div class="telegram"><i class='bx bxl-telegram'></i></div>
+            <div class="instagram"><i class='bx bxl-instagram'></i></div>
+        </div>
+    </div>
+    <div class="home-shop">
+        <ul>
+            <li>
+                <a href="https://sao-wp.ir/digicart/">صفحه خانگی</a>
+            </li>
+            <li> > </li>
+            <li>
+                <span>فروشگاه</span>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="shop-right">
+            <div class="shop-header">
+                <div class="shop-title">
+                    <span>فروشگاه</span>
+                </div>
+                <div class="shop-filter">
+                    <div class="filter-right">
+                        <div class="icons">
+                            <i class='bx bx-menu'></i>
+                            <i class='bx bx-grid-alt'></i>
+                        </div>
+                        <span>
+                            نمایش ۱–۲۰ از ۳۰ نتیجه</span>
+                    </div>
+                    <div class="filter-left">
+                        <div class="select1">
+                            <select>
+                                <option>مرتب سازی پیش فرض</option>
+                                <option>مرتب سازی بر اساس محبوبیت</option>
+                                <option>مرتب سازی بر اساس امتیاز</option>
+                                <option>مرتب سازی بر اساس جدیدترین</option>
+                                <option>مرتب سازی بر اساس ارزانترین</option>
+                                <option>مرتب سازی بر اساس گرانترین</option>
+                            </select>
+                        </div>
+                        <div class="select2">
+                            <select>
+                                <option>نمایش 20</option>
+                                <option>نمایش 12</option>
+                                <option>نمایش 16</option>
+                                <option>نمایش 20</option>
+                                <option>نمایش 24</option>
+                                <option>نمایش 32</option>
+                                <option>نمایش 60</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-products">
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_5.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">اسپیکر و صوتی</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">اسپیکر بلوتوثی خانگی</a>
+                        </div>
+                        <div class="price">
+                            <span>19.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_15.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">هارد و فلش</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">اسپیکر بلوتوثی قابل حمل</a>
+                        </div>
+                        <div class="price">
+                            <span>79.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_9.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">هارد و فلش</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">اسپیکر قابل حمل تسکو</a>
+                        </div>
+                        <div class="price">
+                            <span>69.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_17.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">اسپیکر و صوتی</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">تبلت اپل مدل ایپد</a>
+                        </div>
+                        <div class="price">
+                            <span>14.000 تومان - 12.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_7.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">تبلت و موبایل</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">تبلت اندرویدی 64 گیگ</a>
+                        </div>
+                        <div class="price">
+                            <span>69.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_11.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">اسپیکر و صوتی</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">تبلت شیائومی با قلم</a>
+                        </div>
+                        <div class="price">
+                            <span>85.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_29.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">اسپیکر و صوتی</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">تبلت شیائومی ردمی</a>
+                        </div>
+                        <div class="price">
+                            <span>39.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_22.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">موس و کیبورد</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">تبلت مدل لنوو</a>
+                        </div>
+                        <div class="price">
+                            <span>55.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_10.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">موس و کیبورد</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">دوربین عکاسی ال جی</a>
+                        </div>
+                        <div class="price">
+                            <span>19.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_14.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">لپ تاپ و دسکتاپ</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">دوربین مداربسته شبکه ای</a>
+                        </div>
+                        <div class="price">
+                            <span>19.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_4.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">موس و کیبورد</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">ساعت هوشمند گلکسی</a>
+                        </div>
+                        <div class="price">
+                            <span>39.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_19.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">تبلت و موبایل</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">کنترل ایکس باکس الیت</a>
+                        </div>
+                        <div class="price">
+                            <span>49.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_25.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">تبلت و موبایل</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">کنترل نینتندو سوئیچ</a>
+                        </div>
+                        <div class="price">
+                            <span>55.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_24.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">ساعت دیجیتال</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">گوشی ایفون پرو مکس</a>
+                        </div>
+                        <div class="price">
+                            <span>29.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_28.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">موس و کیبورد</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">گوشی شیائومی ردمی</a>
+                        </div>
+                        <div class="price">
+                            <span>39.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_1.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">تبلت و موبایل</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">گوشی موبایل شیائومی</a>
+                        </div>
+                        <div class="price">
+                            <span>19.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_18.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">ساعت دیجیتال</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">گوشی هواوی نووا</a>
+                        </div>
+                        <div class="price">
+                            <span>39.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_20.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">لپ تاپ و دسکتاپ</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">لپ تاپ 15 اینچی اچ پی</a>
+                        </div>
+                        <div class="price">
+                            <span>29.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_26.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">لپ تاپ دسکتاپ</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">لپ تاپ ایسوس 14 اینچ</a>
+                        </div>
+                        <div class="price">
+                            <span>45.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/product_image_13.jpg" width="195" height="195">
+                    </a>
+                    <div class="details">
+                        <div class="category">
+                            <a href="#">تبلت و موبایل</a>
+                        </div>
+                        <div class="title">
+                            <a href="#">لپ تاپ ایسوس 15 اینچ</a>
+                        </div>
+                        <div class="price">
+                            <span>19.000 تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop-left">
+            <div class="left-top">
+                <div class="title-box">
+                    <div class="title">
+                        <span>دسته بندی محصولات</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <ul class="product-categories">
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">اسپیکر و صوتی</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">تبلت و موبایل</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">ساعت دیجیتال</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">لپ تاپ و دسکتاپ</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">مانیتور و تلویزیون</a>
+                            <span>(10)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">موس و کیبورد</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">هارد و فلش</a>
+                            <span>(5)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">هدست و هدفون</a>
+                            <span>(10)</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-chevron-right bx-sm'></i></span>
+                            <a href="#">وسایل بازی و گیم</a>
+                            <span>(10)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-center">
+            </div>
+            <div class="left-bottom"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footertop">
+            <div class="posts">
+                <div class="post" id="digicart">
+                    <img src="assets/img/logo_footer.png">
+                    <div class="details">
+                        <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                            گرافیک
+                            است</span>
+                    </div>
+                    <div class="address">
+                        <span>خیابان وال استریت، بریتانیا، لندن</span>
+                        <span>تلفن: ۰۲۱-۱۲۳۴-۳۴۵۶</span>
+                        <span>ایمیل : example@gmail.com</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="title">
+                        <span>منو در پاورقی</span>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>پرسش و پاسخ</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>درباره ما</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="title">
+                        <span>دسته بندی</span>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>بدون دسته‌بندی</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>اسپیکر و صوتی</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>تبلت و موبایل</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>ساعت دیجیتال</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>لباس</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="title">
+                        <span>حساب کاربری</span>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>پیشخوان</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>سفارش‌ها</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>دانلودها</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>آدرس</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>جزئیات حساب</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="title">
+                        <span>اطلاعات</span>
+                    </div>
+                    <div class="options">
+
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>حریم خصوصی</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>شرایط و ضوابط</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>سیاست بازگشت</span>
+                        </div>
+                        <div class="option">
+                            <i class='bx bx-chevron-right bx-sm'></i>
+                            <span>خدمات مشتری</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <span>© کپی رایت ۲۰۲۲ | قالب توسط ساوشیانت طراحی شده - کلیه حقوق محفوظ است | برای وردپرس طراحی شده
+                است</span>
             <div class="icons">
                 <div class="facebook"><i class='bx bxl-facebook'></i></div>
                 <div class="twitter"><i class='bx bxl-twitter'></i></div>
@@ -671,73 +718,7 @@
                 <div class="instagram"><i class='bx bxl-instagram'></i></div>
             </div>
         </div>
-    </div>
-    <div class="side">
-        <div class="sde">
-            <ul>
-                <li><a href="index32.html">صفحه خانگی</a></li>
-                <li> > </li>
-                <strong>فروشگاه</strong>
-            </ul>
-        </div>
-        <div class="allprdctg">
-            <div class="prdctg">
-                <div class="products">
-                    <div class="titr">
-                        <h3>فروشگاه</h3>
-                    </div>
-                    <div class="serch">
-                        <div class="srch1">
-                            <i class='bx bx-objects-horizontal-left bx-md'></i>  <i class='bx bx-category bx-md'></i> <p>نمایش 1-20 از 30 نتیجه</p>
-                            
-                        </div>
-                        <div class="srch2">
-                            <select name="orderby" class="sl1">
-                                <option value="op1" selected="selected">مرتب سازی پیش‌فرض</option>
-                                <option value="op1">مرتب ساز محبوبیت</option>
-                                <option value="op1">مرتب سازی امتیاز</option>
-                                <option value="op1">مرتب سازی جدیدترین</option>
-                                <option value="op1">مرتب سازی ارزان ترین</option>
-                                <option value="op1">مرتب سازی گران ترین</option>
-                            </select>
-                            <select name="number" class="sl2">
-                                <option value="op1" selected="selected">نمایش 20</option>
-                                <option value="op1">نمایش 12</option>
-                                <option value="op1">نمایش 16</option>
-                                <option value="op1">نمایش 32</option>
-                                <option value="op1">نمایش 34</option>
-                                <option value="op1">نمایش 40</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="allprds">
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>
-                        <div class="prdct"></div>                        
-                        <div class="prdct"></div>                        
-
-                    </div>
-                </div>
-                <div class="categories"></div>
-            </div>
-        </div>
-    </div>
+    </footer>
 </body>
 
 </html>

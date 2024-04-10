@@ -1,0 +1,840 @@
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: solid rgba(128, 128, 128, 0.133);
+}
+
+nav ul {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+    font-family: vazir;
+    font-weight: 300;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav .details {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-family: vazir;
+    font-weight: 200;
+}
+
+nav .email {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+nav .telephone {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+@media screen and (max-width:576px) {
+    nav {
+        display: none;
+    }
+}
+
+.title .user {
+    display: none;
+}
+
+.title .menu {
+    display: none;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1340px;
+    margin-top: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title .logo {
+    background-color: gray;
+    width: 250px;
+    height: 80px;
+}
+
+.title form {
+    display: flex;
+    flex-direction: center;
+    margin-right: 40px;
+}
+
+.title form select {
+    width: 180px;
+    height: 50px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: none;
+    background-color: #f8f8f8;
+    font-family: vazir;
+    font-weight: 200;
+}
+
+.title form input {
+    width: 300px;
+    height: 48px;
+    border-style: none;
+    background-color: #f8f8f8;
+    font-family: vazir;
+    font-weight: 200;
+}
+
+.title form button {
+    width: 50px;
+    height: 50px;
+    background-color: #83c347;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-style: none;
+}
+
+.title form button i {
+    color: white;
+}
+
+.title .account {
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 90px;
+    background-color: #f8f8f8;
+    font-family: vazir;
+    font-weight: 300;
+}
+
+.title .favorite {
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 10px;
+    background-color: #f8f8f8;
+    font-family: vazir;
+    font-weight: 300;
+}
+
+.title .cart {
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 20px;
+    background-color: #83c347;
+    font-family: vazir;
+    font-weight: 300;
+}
+
+.title .cart i {
+    color: white;
+}
+
+.title .cart span {
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    .title {
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .title form {
+        display: none;
+    }
+
+    .title .account {
+        display: none;
+    }
+
+    .title .favorite {
+        display: none;
+    }
+
+    .title .cart {
+        display: none;
+    }
+
+    .title .user {
+        display: block;
+    }
+
+    .title .menu {
+        display: block;
+    }
+}
+
+.list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 25px;
+    border-top: solid rgba(128, 128, 128, 0.133);
+    max-width: 1340px;
+    margin-top: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid rgba(128, 128, 128, 0.133);
+}
+
+.list .all select {
+    width: 270px;
+    height: 50px;
+    padding: 10px;
+    background-color: #83c347;
+    border-style: none;
+    border-radius: 10px;
+    font-family: vazir;
+    font-weight: 800;
+}
+
+.list .home select {
+    margin-right: 20px;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: vazir;
+    font-weight: 500;
+}
+
+.list .menu select {
+    margin-right: 20px;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: vazir;
+    font-weight: 500;
+}
+
+.list span {
+    margin-right: 20px;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: vazir;
+    font-weight: 500;
+}
+
+.list .icons {
+    margin-right: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.list .icons .facebook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #395498;
+}
+
+.list .icons .facebook i {
+    color: white;
+}
+
+.list .icons .twitter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #5da9dd;
+}
+
+.list .icons .twitter i {
+    color: white;
+}
+
+.list .icons .google {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d54c40;
+}
+
+.list .icons .google i {
+    color: white;
+}
+
+.list .icons .telegram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #29a1d5;
+}
+
+.list .icons .telegram i {
+    color: white;
+}
+
+.list .icons .instagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #00afc0;
+}
+
+.list .icons .instagram i {
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    .list {
+        display: none;
+    }
+}
+
+.home-shop {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(128, 128, 128, 0.094);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.home-shop ul {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: right;
+}
+
+.home-shop ul li {
+    padding-left: 10px;
+    color: gray;
+    font-family: vazir;
+}
+
+.home-shop ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+}
+
+main .shop-right {
+    width: 75%;
+    height: 100%;
+    margin: 20px;
+}
+
+main .shop-right .shop-header {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+main .shop-right .shop-header .shop-title {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.256);
+}
+
+main .shop-right .shop-header .shop-title span {
+    font-family: vazir;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main .shop-right .shop-header .shop-filter {
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.256);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .shop-right .shop-header .shop-filter {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+main .shop-right .shop-header .shop-filter .filter-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main .shop-right .shop-header .shop-filter .filter-right .icons i {
+    font-size: 35px;
+}
+
+main .shop-right .shop-header .shop-filter .filter-right span {
+    font-family: vazir;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 10px 10px 10px 0px;
+}
+
+main .shop-right .shop-header .shop-filter .filter-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+main .shop-right .shop-header .shop-filter .filter-left .select1 select {
+    width: 180px;
+    height: 40px;
+    padding: 0px 10px 0px 0px;
+    font-family: vazir;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+main .shop-right .shop-header .shop-filter .filter-left .select2 select {
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    font-family: vazir;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0px 10px 0px 0px;
+}
+
+main .shop-right .shop-products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+main .shop-right .shop-products .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    height: 350px;
+    border: 1px solid rgba(128, 128, 128, 0.201);
+    border-radius: 7px;
+}
+
+main .shop-right .shop-products .product .details {
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .shop-right .shop-products .product .details a img {
+    width: 100%;
+}
+
+main .shop-right .shop-products .product .details .category {
+    margin-bottom: 10px;
+}
+
+main .shop-right .shop-products .product .details .category a {
+    font-family: vazir;
+    font-weight: 300;
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+main .shop-right .shop-products .product .details .title {
+    margin: 0;
+    padding: 0;
+}
+
+main .shop-right .shop-products .product .details .title a {
+    font-family: vazir;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.631);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+main .shop-right .shop-products .product .details .price {
+    margin-top: 10px;
+}
+
+main .shop-right .shop-products .product .details .price span {
+    font-family: vazir;
+    font-weight: 500;
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+main .shop-left {
+    width: 25%;
+    height: 100%;
+    margin: 0px 20px 20px 10px;
+}
+main .shop-left .left-top{
+    width: 100%;
+    margin: 0px 0px 20px 20px;
+}
+main .shop-left .left-top .title-box{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.256);
+}
+main .shop-left .left-top .title-box .title{
+    margin-left: 23px;
+}
+main .shop-left .left-top .title-box .title span{
+    font-family: vazir;
+    font-size: 18px;
+    font-weight: 500;
+}
+main .shop-left .left-top .container{
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.201);
+    padding: 20px;
+}
+main .shop-left .left-top .container .product-categories{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+main .shop-left .left-top .container .product-categories li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    gap: 2px;
+    color: rgba(65, 65, 65, 0.68);
+}
+main .shop-left .left-top .container .product-categories li span i{
+    padding: 7px 0px 0px 0px;
+}
+main .shop-left .left-top .container .product-categories li a{
+    text-decoration: none;
+    margin-left: 3px;
+    color: black;
+    font-family: vazir;
+    font-weight: 400;
+    font-size: 15px;
+}
+main .shop-left .left-top .container .product-categories li span{
+    font-family: vazir;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 40px;
+    max-width: 1340px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footertop {
+    width: 100%;
+}
+
+footer .footertop .posts {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 40px;
+}
+
+footer .footertop .posts .post {
+    width: 20%;
+    height: 300px;
+}
+
+footer .footertop .posts #digicart img {
+    margin-top: 20px;
+    width: 80%;
+    height: 40px;
+}
+
+footer .footertop .posts #digicart .details {
+    font-size: 13px;
+    font-family: vazir;
+    font-weight: 300;
+    margin: 10px 5px;
+    color: rgba(255, 255, 255, 0.724);
+}
+
+footer .footertop .posts #digicart .address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.724);
+    font-family: vazir;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+footer .footertop .posts .post .title {
+    margin-right: 5px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 18px;
+    border-bottom: solid rgba(128, 128, 128, 0.133);
+    font-family: vazir;
+    font-weight: 600;
+}
+
+footer .footertop .posts .post .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+footer .footertop .posts .post .options .option {
+    margin-left: 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: white;
+    font-family: vazir;
+    font-weight: 400;
+}
+
+footer .footertop .posts .post .options i {
+    padding-top: 2px;
+    color: white;
+}
+
+footer .footerbottom {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.724);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.131);
+}
+
+footer .footerbottom span {
+    margin-right: 20px;
+    font-family: vazir;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+footer .footerbottom .icons {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .footerbottom .icons .facebook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #395498;
+}
+
+footer .footerbottom .icons .facebook i {
+    color: white;
+}
+
+footer .footerbottom .icons .twitter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #5da9dd;
+}
+
+footer .footerbottom .icons .twitter i {
+    color: white;
+}
+
+footer .footerbottom .icons .google {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #d54c40;
+}
+
+footer .footerbottom .icons .google i {
+    color: white;
+}
+
+footer .footerbottom .icons .telegram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #29a1d5;
+}
+
+footer .footerbottom .icons .telegram i {
+    color: white;
+}
+
+footer .footerbottom .icons .instagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #00afc0;
+}
+
+footer .footerbottom .icons .instagram i {
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer .footertop {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    footer .footertop .posts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    footer .footertop .posts #digicart {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    footer .footertop .posts .title {
+        display: block;
+    }
+
+    footer .footertop .posts .post {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        width: 100%;
+    }
+
+    footer .footerbottom {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+}
